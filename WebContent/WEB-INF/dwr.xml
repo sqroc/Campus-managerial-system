@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">    
+
+<dwr>
+	<allow>
+		
+		<convert converter="bean" match="ems.model.Admin" />
+		<convert converter="bean" match="ems.model.Equipment" />
+		<convert converter="bean" match="ems.model.Provider" />
+		<convert converter="bean" match="ems.model.LogBug" />
+		<convert converter="bean" match="ems.model.LogSession" />
+		<convert converter="bean" match="ems.model.ManualWarn" />
+		<convert converter="bean" match="ems.model.LogOverhaul" />
+		<convert converter="bean" match="ems.model.Fettle" />
+ 
+		
+ 
+		<create creator="spring" javascript="Admin">
+			<param name="beanName" value="Admin" />
+			<include method="add" />
+			<include method="modify" />
+			<include method="deleteByid" />
+			<include method="getAdmins" />
+			<include method="deleteBatch" />
+		</create>
+		<create creator="spring" javascript="Equipment">
+			<param name="beanName" value="Equipment" />
+			<include method="add" />
+			<include method="modify" />
+			<include method="deleteBatch" />
+		</create>
+		<create creator="spring" javascript="Provider">
+			<param name="beanName" value="Provider" />
+			<include method="add" />
+			<include method="modify" />
+			<include method="deleteBatch" />
+		</create>
+		<create creator="spring" javascript="LogBug">
+			<param name="beanName" value="Logbug" />
+			<include method="add" />
+			<include method="modify" />
+			<include method="deleteBatch" />
+		</create>
+		<create creator="spring" javascript="Fettle">
+			<param name="beanName" value="Fettle" />
+			<include method="add" />
+			<include method="modify" />
+			<include method="deleteBatch" />
+		</create>
+		<create creator="spring" javascript="LogSession">
+			<param name="beanName" value="Logsession" />
+			<include method="add" />
+			<include method="modify" />
+			<include method="deleteBatch" />
+		</create>
+		
+		<create creator="spring" javascript="Permission">
+			<param name="beanName" value="Permission" />
+			<include method="getRank" />
+			<include method="getMe" />
+		</create>
+		
+		<create creator="spring" javascript="ManualWarn">
+			<param name="beanName" value="Manualwarn" />
+			<include method="deleteBatch" />
+		</create>
+		<create creator="spring" javascript="LogOverhaul">
+			<param name="beanName" value="Logoverhaul" />
+			<include method="deleteBatch" />
+		</create>
+		<create creator="spring" javascript="Checkoverhaul">
+			<param name="beanName" value="Checkoverhaul" />
+			<include method="execute" />
+		</create>
+	</allow>
+</dwr>

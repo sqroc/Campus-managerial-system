@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+  
+  <constant name="struts.action.extension" value="action,/dwr/*" /> 
+</struts>
+
+
+<!--   <package name="ems" extends="struts-default" >
+        <action name="test" class="ems.action.testAction" method="execute" >
+			 <result name="success">/testPage/welcome.jsp</result>
+			<result name="failure">/testPage/failure.jsp</result>
+        </action>
+    </package> 
+--> 
